@@ -2,7 +2,7 @@ import FaxUpload from "./Pages/FaxUpload";
 
 const FaxRoutes = [
   {
-    path: "/",
+    path: "/fax-upload",
     element: <FaxUpload />,
   },
 ];
