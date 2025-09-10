@@ -1,0 +1,212 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Figtree&display=swap");
+
+body {
+  font-size: 100%;
+  font-family: "Figtree", serif;
+  color: #050505;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+.btn {
+  font-family: "Aboreto", serif;
+}
+h1 {
+  font-size: 3.375rem;
+}
+h2 {
+  font-size: 3rem;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.color-primary {
+  color: #ac8ca0;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.btn-primary {
+  /* background: #ac8ca0; */
+  background: var(--button-bg);
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.4375rem;
+  padding: 0.9375rem 1.875rem;
+  border-radius: 1.875rem;
+  border: 0px;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  /* background: #947287 !important; */
+  background: var(--button-hover-bg) !important;
+}
+
+.btn-secondary {
+  background: #6794b6;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.4375rem;
+  padding: 0.9375rem 1.875rem;
+  border-radius: 1.875rem;
+  border: 0px;
+}
+
+select.form-control {
+  background-image: url("../../Assets/images/icon_chevron.svg") !important;
+  appearance: none !important;
+  background-repeat: no-repeat !important;
+  background-position: 96% 50% !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background: #527fa1 !important;
+}
+
+.bs-stepper-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  align-items: center;
+  background: #0505054d;
+  color: #fff;
+  font-family: "Aboreto", serif;
+  font-weight: normal;
+  font-size: 20px;
+}
+.active .bs-stepper-circle {
+  background-color: #050505;
+  border: 10px solid #d5c5cf;
+  box-sizing: content-box;
+  padding: 0;
+}
+.bs-stepper .step-trigger:hover {
+  background: transparent;
+}
+.custom-form .form-control {
+  background: #e0d6d680;
+  border: 0;
+  height: 60px;
+  outline: none;
+  box-shadow: none;
+  margin: 0 !important;
+  appearance: auto;
+  color: #000;
+}
+.custom-form span.input-group-text {
+  background: #e0d6d680;
+  border: 0;
+}
+.custom-form .input-group {
+  border-radius: 5px;
+}
+.PhoneInputInput {
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+.custom-popup h4 {
+  font-size: 3rem;
+  margin-bottom: 3.125rem;
+}
+.custom-popup p {
+  font-size: 1.25rem;
+  margin-bottom: 1.875rem;
+}
+.custom-popup .modal-footer,
+.custom-popup .modal-header {
+  border: 0;
+  text-align: center;
+}
+.custom-popup .modal-footer .step-footer {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.checkList li {
+  background: url(../../Assets/images/list_icon_checkmark.svg) left no-repeat;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0px 5px 30px;
+  vertical-align: middle;
+}
+.checkList.instructions {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+.bs-stepper-header {
+  max-width: 510px;
+  margin: auto;
+  justify-content: center;
+}
+
+.pinImage {
+  max-width: 100%;
+  border: 1px solid #e0d6d6;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+}
+@media (max-width: 992px) {
+  .main-logo {
+    max-width: 70px;
+  }
+  h1 {
+    font-size: 1.875rem;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  .bs-stepper-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 16px;
+  }
+  .bs-stepper .step-trigger {
+    padding: 0;
+  }
+  .active .bs-stepper-circle {
+    border: 5px solid #d5c5cf;
+  }
+  .step-footer.last-step {
+    justify-content: center !important;
+  }
+}
+@media (max-width: 767px) {
+  .btn-primary {
+    font-size: 1rem;
+  }
+  .custom-popup h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.875rem;
+  }
+  .swiper-container {
+    padding: 0 !important;
+  }
+  .step-footer.last-step .last-step-mob {
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+  .step-footer.last-step .last-step-mob button {
+    margin: 0 !important;
+  }
+}
+
+.empty-areas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 231px);
+}

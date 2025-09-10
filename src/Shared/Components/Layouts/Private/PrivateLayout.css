@@ -1,0 +1,34 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.layout-outlet {
+  flex: 1;
+  overflow-y: auto;
+  /* padding: 20px; */
+  background-color: #fff;
+}
+
+.Header {
+  flex-shrink: 0;
+}
+
+/* Optional: control outlet width based on sidebar */
+.layout-outlet.collapsed {
+  /* If you need to shift outlet based on sidebar, control margin or padding here */
+}

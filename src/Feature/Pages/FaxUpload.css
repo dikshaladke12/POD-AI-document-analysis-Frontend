@@ -1,0 +1,252 @@
+/* Global Layout */
+.nav-logo {
+  height: 60px;
+  width: 40px;
+}
+
+.fax-container {
+  font-family: "Inter", sans-serif;
+  background: #f4f7fb;
+  min-height: 100vh;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.fax-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e9f0;
+}
+
+.fax-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0077b6;
+}
+
+.fax-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Step Cards */
+.step-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  max-width: 1256px;
+  text-align: left;
+  border: 1px solid #e5e9f0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+}
+
+.step-title {
+  color: #0077b6;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.step-subtext {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Upload Box */
+.upload-box {
+  border: 2px dashed #0096c7;
+  background: #eaf7ff;
+  padding: 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  background: #d9f0ff;
+  border-color: #0077b6;
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.upload-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #0096c7;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.upload-btn:hover {
+  background: #0077b6;
+}
+
+/* File Preview */
+.file-preview {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #f1f9ff;
+  border: 1px solid #cfe5ff;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* JSON Input */
+.json-input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.95rem;
+  background: #fafafa;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.json-input:focus {
+  border-color: #0077b6;
+}
+
+/* OCR Selection */
+.radio-label {
+  display: block;
+  margin: 0.7rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.paid-ocr-options {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Config Inputs */
+.config-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.config-box input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.config-box input:focus {
+  border-color: #0077b6;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 1rem;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(135deg, #0096c7, #0077b6);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #0077b6, #023e8a);
+  transform: translateY(-2px);
+}
+/* --- Only additional styles for Step 3 --- */
+
+.option-grid {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.option-grid.nested {
+  margin-left: 1rem;
+}
+
+.option-card {
+  flex: 1;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.option-card input {
+  display: none;
+}
+
+.option-card .option-content {
+  text-align: left;
+}
+
+.option-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0077b6;
+}
+
+.option-card p {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.option-card:hover {
+  border-color: #0096c7;
+  background: #f0faff;
+}
+
+.option-card.selected {
+  border-color: #0077b6;
+  background: #eaf7ff;
+  box-shadow: 0 0 6px rgba(0, 119, 182, 0.2);
+}
+
+.option-card.small {
+  flex: 0.5;
+}
+/* Error Text */
+.error-text {
+  margin-top: 6px;
+  font-size: 13px;
+  color: red; /* 🔴 error messages will appear in red */
+}
