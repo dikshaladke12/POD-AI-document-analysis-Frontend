@@ -15,11 +15,12 @@ export function ProtectedOutlet() {
 export function PublicOutlet() {
   const navigate = useNavigate();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  console.log("isLoggedIn : ",isLoggedIn);
 
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/dashboard", { replace: true });
+      navigate("/fax-upload", { replace: true });
     }
   }, [isLoggedIn, navigate]);
   return !isLoggedIn ? <Outlet /> : null;
