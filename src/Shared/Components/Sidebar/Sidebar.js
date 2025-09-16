@@ -11,16 +11,12 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  //   const navItems = [
-  //     { label: "Dashboard", path: "/dashboard" },
-  //     { label: "Providers", path: "/providers" },
-  //     { label: "History", path: "/history" },
-  //   ];
-
   const navItems = [
-    { label: "Dashboard", path: "/dashboard", icon: <FaTachometerAlt /> },
-    { label: "Fax Service", path: "/providers", icon: <FaXbox /> },
-    { label: "History", path: "/history", icon: <FaRegFolder /> },
+    {
+      label: "Upload Document",
+      path: "/fax-upload",
+      icon: <FaTachometerAlt />,
+    },
   ];
 
   return (

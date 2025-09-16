@@ -49,36 +49,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// import { useDispatch } from "react-redux";
-// import { useNavigate } from "react-router-dom";
-// import { userlogout } from "../../Slice/AuthSlice";
-// import Logo from "../../../../Assets/signal63.svg";
-// import Logout from "../../../../Assets/logout-svgrepo-com.svg";
-// import "./Header.css";
-
-// const Header = () => {
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-
-//   const logoutUser = () => {
-//     dispatch(userlogout());
-//     navigate("/login");
-//   };
-
-//   return (
-//     <div className="header-container">
-//       <div className="logo-section">
-//         <img src={Logo} alt="Logo" className="logo-img" />
-//         {/* <span className="logo-text">AI Document Analyzer</span> */}
-//       </div>
-//       <div className="header-icon-container dropdown-wrapper">
-//         <div className="dropdown-item" onClick={logoutUser}>
-//           <img src={Logout} alt="Logo" className="logo-img" />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Header;

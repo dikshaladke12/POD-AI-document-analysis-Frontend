@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./Login.css";
 import { useDispatch } from "react-redux";
 import Service from "./Service";
-import showToast from "../../Shared/Utils/ToastNotification";
-import { userlogin } from "../../Shared/Slice/AuthSlice";
+import showToast from "../../../Shared/Utils/ToastNotification";
+import { userlogin } from "../../../Shared/Slice/AuthSlice";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -34,12 +34,12 @@ const Login = () => {
 
       if (response?.status === 200) {
         showToast("success", "Login successful");
-
+        console.log("response.data.user : ",response.data)
         // save in redux
-        dispatch(userlogin(response.data.user));
+        dispatch(userlogin(response.data));
 
         // optional: save token
-        localStorage.setItem("token", response.data.token);
+        // localStorage.setItem("token", response.data.token);
       } else {
         showToast("error", response?.data?.message || "Login failed");
       }
@@ -99,7 +99,7 @@ const Login = () => {
             </div>
 
             <p className="signup-text">
-              Don’t have an account? <a href="#">Sign Up</a>
+              Don’t have an account? <a href="/Sign-up">Sign Up</a>
             </p>
           </form>
         </div>

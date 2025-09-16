@@ -15,7 +15,6 @@ export function ProtectedOutlet() {
 export function PublicOutlet() {
   const navigate = useNavigate();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  console.log("isLoggedIn : ",isLoggedIn);
 
 
   useEffect(() => {

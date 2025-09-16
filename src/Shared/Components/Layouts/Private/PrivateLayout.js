@@ -10,7 +10,7 @@ const PrivateLayout = () => {
   return (
     <div className="layout-container">
       <div className="layout-header">
-        {/* <Header /> */}
+        <Header />
       </div>
       <div className="layout-body">
         <Sidebar />

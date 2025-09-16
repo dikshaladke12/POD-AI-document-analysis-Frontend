@@ -1,6 +1,6 @@
 const environments = {
   local: {
-    url: "http://0.0.0.0:9076", // set you local url here
+    url: "http://0.0.0.0:8003", // set you local url here
   },
   staging: {
     url: "", // Set your staging URL here

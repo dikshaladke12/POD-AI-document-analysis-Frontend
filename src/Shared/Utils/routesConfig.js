@@ -26,7 +26,7 @@ const getRoutesConfig = () => {
       children: [
         {
           element: <PrivateLayout />,
-          // children: PrivateRoute,
+          children: PrivateRoute,
         },
       ],
     },

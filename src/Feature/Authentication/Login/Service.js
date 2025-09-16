@@ -1,5 +1,5 @@
-import { axiosInstance } from "../../Interceptors/axiosInterceptor";
-import ApiUrlConstant from "../../Utils/UrlConstants";
+import { axiosInstance } from "../../../Interceptors/axiosInterceptor";
+import ApiUrlConstant from "../../../Utils/UrlConstants";
 
 const Service = {
   Login: (data) => {

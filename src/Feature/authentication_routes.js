@@ -1,4 +1,4 @@
-import Login from "./Authentication/Login";
+import Login from "./Authentication/Login/Login";
 
 const AuthenticationRoute = [
   {
