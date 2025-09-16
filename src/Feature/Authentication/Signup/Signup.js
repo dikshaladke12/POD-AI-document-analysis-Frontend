@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import "./Login.css"; // reusing same CSS for consistency
-import { useDispatch } from "react-redux";
-import Service from "./Service";
+import "./Signup.css"; 
+import Service from "../Service";
+import { useNavigate } from "react-router-dom";
 import showToast from "../../../Shared/Utils/ToastNotification";
-import { userlogin } from "../../../Shared/Slice/AuthSlice";
 
 const Signup = () => {
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
     name: "",
@@ -19,11 +18,44 @@ const Signup = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!form.name) newErrors.name = "Name is required";
-    if (!form.email) newErrors.email = "Email is required";
-    if (!form.password) newErrors.password = "Password is required";
-    if (form.password !== form.confirmPassword)
+
+    // ✅ Name validation
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (form.name.trim().length < 2) {
+      newErrors.name = "Name must be at least 2 characters";
+    } else if (!/^[a-zA-Z\s]+$/.test(form.name.trim())) {
+      newErrors.name = "Name can only contain letters and spaces";
+    }
+
+    // ✅ Email validation
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      newErrors.email = "Enter a valid email address";
+    }
+
+    // ✅ Password validation
+    if (!form.password) {
+      newErrors.password = "Password is required";
+    } else if (form.password.length < 8) {
+      newErrors.password = "Password must be at least 8 characters";
+    } else if (!/[A-Z]/.test(form.password)) {
+      newErrors.password = "Password must contain at least one uppercase letter";
+    } else if (!/[a-z]/.test(form.password)) {
+      newErrors.password = "Password must contain at least one lowercase letter";
+    } else if (!/[0-9]/.test(form.password)) {
+      newErrors.password = "Password must contain at least one number";
+    } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(form.password)) {
+      newErrors.password = "Password must contain at least one special character";
+    }
+
+    // ✅ Confirm password validation
+    if (!form.confirmPassword) {
+      newErrors.confirmPassword = "Please confirm your password";
+    } else if (form.password !== form.confirmPassword) {
       newErrors.confirmPassword = "Passwords do not match";
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -44,11 +76,8 @@ const Signup = () => {
       if (response?.status === 201) {
         showToast("success", "Account created successfully");
 
-        // save in redux
-        dispatch(userlogin(response.data.user));
-
-        // optional: save token
-        // localStorage.setItem("token", response.data.token);
+        // Redirect to login page after signup
+        navigate("/login");
       } else {
         showToast("error", response?.data?.message || "Signup failed");
       }

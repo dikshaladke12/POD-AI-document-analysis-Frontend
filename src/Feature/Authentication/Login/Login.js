@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useDispatch } from "react-redux";
-import Service from "./Service";
-import showToast from "../../../Shared/Utils/ToastNotification";
+import Service from "../Service";
 import { userlogin } from "../../../Shared/Slice/AuthSlice";
+import showToast from "../../../Shared/Utils/ToastNotification";
 
 const Login = () => {
   const dispatch = useDispatch();
